@@ -186,3 +186,7 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
+# Local trajectory data and analysis results
+/indexed/
+/results/
+
