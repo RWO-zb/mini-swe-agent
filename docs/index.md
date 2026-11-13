@@ -102,9 +102,6 @@ We now ask: **What if our agent was 100x simpler, and still worked nearly as wel
 <td width="50%">
 <a href="usage/mini"><strong>CLI</strong></a> (<code>mini</code>)
 </td>
-<td>
-<a href="usage/swebench/"><strong>Batch inference</strong></a>
-</td>
 </tr>
 <tr>
 <td width="50%">
@@ -113,13 +110,6 @@ We now ask: **What if our agent was 100x simpler, and still worked nearly as wel
          data-gif="https://github.com/SWE-agent/swe-agent-media/blob/main/media/mini/gif/mini.gif?raw=true"
          alt="mini" data-glightbox="false" />
   </div>
-</td>
-<td>
-<div class="gif-container" data-glightbox-disabled>
-  <img src="https://github.com/SWE-agent/swe-agent-media/blob/main/media/mini/png/swebench.png?raw=true"
-       data-gif="https://github.com/SWE-agent/swe-agent-media/blob/main/media/mini/gif/swebench.gif?raw=true"
-       alt="swebench" data-glightbox="false" />
-</div>
 </td>
 </tr>
 <tr>
@@ -211,7 +201,6 @@ agent.run("Write a sudoku game")</code></pre>
 
 * [mini-swe-agent now powers Ramp SWE-Bench](https://labs.ramp.com/swebench)
 * [mini-swe-agent beats Claude Code and Codex on DeepSWE](https://deepswe.datacurve.ai/blog#evaluation-harness)
-* [Run mini-swe-agent on our new & extremely challenging benchmark, ProgramBench](usage/programbench.md)
 * [New tutorial on building minimal AI agents](https://minimal-agent.com/)
 * Nov 19: [Gemini 3 Pro reaches 74% on SWE-bench verified with mini-swe-agent!](https://x.com/KLieret/status/1991164693839270372)
 * Aug 19: [New blogpost: Randomly switching between GPT-5 and Sonnet 4 boosts performance](https://www.swebench.com/post-250820-mini-roulette.html)
