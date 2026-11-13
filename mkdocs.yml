@@ -65,8 +65,6 @@ nav:
     - "Command line usage":
       - "<code>mini</code>": usage/mini.md
       - "Config": usage/config.md
-      - "SWE-bench": usage/swebench.md
-      - "ProgramBench": usage/programbench.md
       - "Inspector": usage/inspector.md
       - "Output files": usage/output_files.md
     - "Language models":
@@ -114,9 +112,6 @@ nav:
       - "mini-extra": "reference/run/mini_extra.md"
       - "Config": "reference/run/config.md"
       - "Inspector": "reference/run/inspector.md"
-      - "SWE-bench (batch)": "reference/run/swebench.md"
-      - "SWE-bench (single)": "reference/run/swebench_single.md"
-      - "ProgramBench": "reference/run/programbench.md"
   - Blog: https://www.swebench.com/blog.html
   - Leaderboard: https://swebench.com
 plugins:

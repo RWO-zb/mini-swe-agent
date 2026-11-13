@@ -94,18 +94,7 @@ You can customize this behavior by setting the `action_regex` field to support d
 
 !!! warning "Important"
 
-    If you set a custom action_regex (e.g. `<action>(.*?)</action>`), you must use the same output format across all prompt templates (system_template, instance_template, format_error_template, etc.), ensuring the LLM wraps commands accordingly. See the example below for a complete configuration.
-
-
-??? example "Using XML format instead of markdown"
-
-    This example uses the same structure as the default mini.yaml config, but with `<action>` tags instead of markdown code blocks:
-
-    ```yaml
-    --8<-- "src/minisweagent/config/benchmarks/swebench_xml.yaml"
-    ```
-
-    You can also directly load this config by specifying `--config swebench_xml`.
+    If you set a custom action_regex (e.g. `<action>(.*?)</action>`), you must use the same output format across all prompt templates (system_template, instance_template, format_error_template, etc.), ensuring the LLM wraps commands accordingly.
 
 
 ??? example "Default markdown format"

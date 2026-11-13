@@ -72,7 +72,7 @@ model:
 
 ```bash
 mini -c mini.yaml -c model.model_kwargs.temperature=0.5
-mini -c swebench.yaml -c agent.step_limit=100
+mini -c mini.yaml -c agent.step_limit=100
 mini -c mini.yaml -c /path/to/model.yaml
 ```
 
@@ -90,16 +90,13 @@ v2.0 uses native tool calling by default (instead of regex-based text parsing).
 
 **How to use it:**
 
-Tool calling is the default. The CLI uses `mini.yaml` and `swebench.yaml` which are configured for tool calling.
+Tool calling is the default. The CLI uses `mini.yaml` which is configured for tool calling.
 
 ```bash
 # Default (tool calling)
 mini
-python -m minisweagent.run.benchmarks.swebench
-mini-extra swebench
 
 # Text-based parsing
-mini-extra swebench -c swebench_backticks.yaml
 mini -c mini_textbased.yaml
 ```
 

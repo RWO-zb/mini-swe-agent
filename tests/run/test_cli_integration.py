@@ -392,7 +392,8 @@ def test_mini_extra_help():
     assert "central entry point for all extra commands" in clean_output
     assert "config" in clean_output
     assert "inspect" in clean_output
-    assert "swebench" in clean_output
+    assert "swebench" not in clean_output
+    assert "programbench" not in clean_output
 
 
 def test_mini_e_help():
@@ -414,8 +415,6 @@ def test_mini_e_help():
     [
         ("config", ["config"]),
         ("inspect", ["inspect", "i", "inspector"]),
-        ("swebench", ["swebench"]),
-        ("swebench-single", ["swebench-single"]),
     ],
 )
 def test_mini_extra_subcommand_help(subcommand: str, aliases: list[str]):

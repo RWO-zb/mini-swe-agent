@@ -19,16 +19,4 @@ This environment executes commands in [Modal](https://modal.com) sandboxes using
    modal setup
    ```
 
-## Usage
-
-Evaluate GPT-5 mini on SWE-bench using Modal:
-```
-mini-extra swebench \
-    --config src/minisweagent/config/extra/swebench_modal.yaml \
-    --subset verified \
-    --split test \
-    --workers 100 \
-    -o ./results/gpt5-mini-modal
-```
-
 {% include-markdown "../../_footer.md" %}

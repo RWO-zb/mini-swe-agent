@@ -28,18 +28,5 @@ This environment executes commands in [ConTree](https://contree.dev) sandboxes u
    export CONTREE_BASE_URL="your-given-base-url-for-contree"
    ```
 
-## Usage
-
-Run mini-swe-agent like with any other environment:
-```
-mini-extra swebench \
-    --subset verified \
-    --split test \
-    --workers 100
-    --environment-class contree
-```
-
-It can be specified both through cli parameter or by setting `environment_class` to `contree` in your swebench.yaml config
-
 {% include-markdown "../../_footer.md" %}
 
