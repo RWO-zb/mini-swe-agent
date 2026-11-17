@@ -1,4 +1,4 @@
-"""Compare human-labeled trajectory pairs and extract transferable lessons."""
+"""Compare human-labeled trajectory pairs and extract evidence-backed case lessons."""
 
 import json
 from pathlib import Path
@@ -35,8 +35,16 @@ def run_pairs(
         report_path = output_dir / f"{pair['task_id']}.analysis.json"
         report_path.unlink(missing_ok=True)
         agent = DefaultAgent(
-            model_class(**(settings.get("model", {}) | {"model_name": get_model_name(model, settings.get("model"))})),
-            AnalysisEnvironment(db),
+            model_class(
+                **(
+                    settings.get("model", {})
+                    | {
+                        "model_name": get_model_name(model, settings.get("model")),
+                        "max_lessons": settings["max_lessons"],
+                    }
+                )
+            ),
+            AnalysisEnvironment(db, max_lessons=settings["max_lessons"], trajectories=[success, failure]),
             **(settings["agent"] | {"output_path": output_dir / f"{pair['task_id']}.traj.json"}),
         )
         result = agent.run(
@@ -53,7 +61,7 @@ def run_pairs(
             report_path.write_text(
                 json.dumps(
                     {
-                        "schema_version": "1.0",
+                        "schema_version": "1.1",
                         "analysis_spec_version": settings["analysis_spec_version"],
                         "pair": {
                             "task_id": pair["task_id"],
